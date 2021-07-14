@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 
-//test
 
 namespace mcr_2._0
 {

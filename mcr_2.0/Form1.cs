@@ -52,9 +52,11 @@ namespace mcr_2._0
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            //loads the search form as soon as the application is opened
             showForm(new searchForm());
         }
 
+        //this is a method to open the other forms; used for the sidebar buttons
         public void showForm(Object Form)
         {
             pnlForms.Controls.Clear();
@@ -65,72 +67,6 @@ namespace mcr_2._0
             frm.Show();
         }
 
-        //HOME BUTTON
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //opening the form
-            showForm(new searchForm());
-
-            //to move the nav bar, change the button color on click
-            pnlNav.Height = btnSearch.Height;
-            pnlNav.Top = btnSearch.Top;
-            pnlNav.Left = btnSearch.Left;
-            btnSearch.BackColor = Color.FromArgb(45, 106, 79);
-
-            
-        }
-
-        private void btnSearch_Leave(object sender, EventArgs e)
-        {
-            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
-        }
-
-        //ALL ITEMS BUTTON
-        private void btnAll_Click(object sender, EventArgs e)
-        {
-            //opening All Items Form
-            showForm(new allForm());
-
-            //to change the default color of the home button
-            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
-
-            //to move the nav bar, change the button color on click
-            pnlNav.Height = btnAll.Height;
-            pnlNav.Top = btnAll.Top;
-            pnlNav.Left = btnAll.Left;
-            btnAll.BackColor = Color.FromArgb(45, 106, 79);
-        }
-
-        private void btnAll_Leave(object sender, EventArgs e)
-        {
-            //change the button back to normal after another button is clicked
-            btnAll.BackColor = Color.FromArgb(27, 67, 50);
-        }
-
-        //SETTINGS BUTTON
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-
-            //opening the settings form
-            showForm(new settingsForm());
-
-            //to change the default color of the home button
-            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
-
-            //to move the nav bar, change the button color on click
-            pnlNav.Height = btnSettings.Height;
-            pnlNav.Top = btnSettings.Top;
-            pnlNav.Left = btnSettings.Left;
-            btnSettings.BackColor = Color.FromArgb(45, 106, 79);
-        }
-
-        private void btnSettings_Leave(object sender, EventArgs e)
-        {
-            //change the button back to normal after another button is clicked
-            btnSettings.BackColor = Color.FromArgb(27, 67, 50);
-        }
-        
-        
         //making the form draggable
         private void pnlDrag_MouseDown(object sender, MouseEventArgs e)
         {
@@ -148,6 +84,70 @@ namespace mcr_2._0
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        //HOME BUTTON
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //opening the form
+            showForm(new searchForm());
+
+            //to move the nav bar, change the button color on click
+            pnlNav.Height = btnSearch.Height;
+            pnlNav.Top = btnSearch.Top;
+            pnlNav.Left = btnSearch.Left;
+            btnSearch.BackColor = Color.FromArgb(45, 106, 79);
+
+            
+        }
+        private void btnSearch_Leave(object sender, EventArgs e)
+        {
+            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
+        }
+
+
+        //ALL ITEMS BUTTON
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            //opening All Items Form
+            showForm(new allForm());
+
+            //to change the default color of the home button
+            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
+
+            //to move the nav bar, change the button color on click
+            pnlNav.Height = btnAll.Height;
+            pnlNav.Top = btnAll.Top;
+            pnlNav.Left = btnAll.Left;
+            btnAll.BackColor = Color.FromArgb(45, 106, 79);
+        }
+        private void btnAll_Leave(object sender, EventArgs e)
+        {
+            //change the button back to normal after another button is clicked
+            btnAll.BackColor = Color.FromArgb(27, 67, 50);
+        }
+
+
+        //SETTINGS BUTTON
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
+            //opening the settings form
+            showForm(new settingsForm());
+
+            //to change the default color of the home button
+            btnSearch.BackColor = Color.FromArgb(27, 67, 50);
+
+            //to move the nav bar, change the button color on click
+            pnlNav.Height = btnSettings.Height;
+            pnlNav.Top = btnSettings.Top;
+            pnlNav.Left = btnSettings.Left;
+            btnSettings.BackColor = Color.FromArgb(45, 106, 79);
+        }
+        private void btnSettings_Leave(object sender, EventArgs e)
+        {
+            //change the button back to normal after another button is clicked
+            btnSettings.BackColor = Color.FromArgb(27, 67, 50);
         }
 
     }
